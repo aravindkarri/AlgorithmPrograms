@@ -2,6 +2,12 @@ package com.bridgelabz.algorithmprograms.binarysearch;
 
 import java.util.Scanner;
 
+/**
+ * Class to sort string array elements and search an element 
+ * using binary search algorithm
+ * @author Aravind
+ *
+ */
 public class BinarySearch 
 {	
 	public static void main(String[] args) 
@@ -24,7 +30,35 @@ public class BinarySearch
 			System.out.println("Word found");
 		}
 	}
+	/**
+	 * sorting array in ascending order
+	 * @param array
+	 * @param size
+	 */
+	private static void sortArray(String[] array,int size) 
+	{
+		for(int i=0;i<size-1;i++)
+		{
+			for(int j=i+1;j<size;j++)
+			{
+				if(array[i].compareTo(array[j]) > 0 )
+				{
+					//swapping
+					String temp = array[i];
+					array[i] = array[j];
+					array[j] = temp;
 
+				}
+			}
+		}
+	}
+	/**
+	 * Method to search element using binary search algorithm
+	 * @param word
+	 * @param array
+	 * @param size
+	 * @return
+	 */
 	private static int binarySearch(String word, String[] array, int size) 
 	{
 		int firstIndex = 0;
@@ -48,25 +82,6 @@ public class BinarySearch
 			}	
 		}
 		return -1;
-	}
-
-	private static void sortArray(String[] array,int size) 
-	{
-		//sorting array in ascending order
-		for(int i=0;i<size-1;i++)
-		{
-			for(int j=i+1;j<size;j++)
-			{
-				if(array[i].compareTo(array[j]) > 0 )
-				{
-					//swapping
-					String temp = array[i];
-					array[i] = array[j];
-					array[j] = temp;
-
-				}
-			}
-		}
 	}
 
 }
