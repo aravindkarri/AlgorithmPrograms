@@ -8,12 +8,11 @@ public class PrimeNumbers
 {
 	public static void main(String[] args) 
 	{
-		for(int i=0; i<=1000; i++)
+		int minBound=0;
+		int maxBound=1000;
+		for(int i=minBound+1; i<maxBound; i++)
 		{
-			if(i ==1 || i==0 )
-			{
-				continue;
-			}
+			
 			int flag = 1;
 			for (int j=2; j<=i/2; j++)
 			{
