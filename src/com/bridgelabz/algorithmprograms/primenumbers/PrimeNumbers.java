@@ -12,7 +12,7 @@ public class PrimeNumbers
 		int maxBound=1000;
 		for(int i=minBound+1; i<maxBound; i++)
 		{
-			
+
 			int flag = 1;
 			for (int j=2; j<=i/2; j++)
 			{
